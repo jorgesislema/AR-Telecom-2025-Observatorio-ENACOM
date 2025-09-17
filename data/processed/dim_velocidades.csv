@@ -1,0 +1,9 @@
+velocidad_id,rango_velocidad,velocidad_min_kbps,velocidad_max_kbps,categoria,descripcion,uso_recomendado
+1,hasta 512 kbps,0,512,Banda Angosta,Conexión básica de internet,Email y navegación básica
+2,entre 512 kbps y 1 Mbps,512,1024,Banda Angosta,Conexión básica mejorada,Navegación web y email
+3,entre 1 Mbps y 6 Mbps,1024,6144,Banda Media,Conexión estándar,Streaming SD y videoconferencias
+4,entre 6 Mbps y 10 Mbps,6144,10240,Banda Media,Conexión buena,Streaming HD y juegos online
+5,entre 10 Mbps y 20 Mbps,10240,20480,Banda Ancha,Conexión alta,Múltiples dispositivos y streaming
+6,entre 20 Mbps y 30 Mbps,20480,30720,Banda Ancha,Conexión muy alta,Streaming 4K y trabajo remoto
+7,mayor a 30 Mbps,30720,1000000,Ultra Banda Ancha,Conexión premium,Uso intensivo y empresarial
+8,otros,0,0,Sin Clasificar,Velocidades no especificadas,Variable según proveedor
