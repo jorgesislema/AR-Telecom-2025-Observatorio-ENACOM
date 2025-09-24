@@ -1,0 +1,7 @@
+servicio_id,servicio,categoria,descripcion
+SRV1,INTERNET_FIJO,CONECTIVIDAD,Servicios de internet fijo
+SRV2,INTERNET_MOVIL,CONECTIVIDAD,Servicios de internet móvil
+SRV3,TELEFONIA_FIJA,TELEFONIA,Servicios de telefonía fija
+SRV4,TELEFONIA_MOVIL,TELEFONIA,Servicios de telefonía móvil
+SRV5,TV_PAGA,ENTRETENIMIENTO,Servicios de TV por suscripción
+SRV6,MERCADO_POSTAL,POSTAL,Servicios postales y envíos
