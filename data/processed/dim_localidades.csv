@@ -1,0 +1,4 @@
+localidad_id,provincia,partido,localidad,link_indec
+LOC1,Buenos Aires,La Plata,Tolosa,https://www.indec.gob.ar
+LOC2,Cordoba,Capital,Cordoba,https://www.indec.gob.ar
+LOC3,Santa Fe,Rosario,Rosario,https://www.indec.gob.ar
