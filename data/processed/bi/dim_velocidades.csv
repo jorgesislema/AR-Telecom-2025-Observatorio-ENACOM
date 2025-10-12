@@ -1,0 +1,4 @@
+velocidad_id,rango_velocidad,velocidad_min_kbps,velocidad_max_kbps
+1,0-3 Mbps,0,2999
+2,3-10 Mbps,3000,9999
+3,10+ Mbps,10000,999999
