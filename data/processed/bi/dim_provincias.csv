@@ -1,0 +1,25 @@
+provincia_id,provincia,region,poblacion_2023,superficie_km2
+1,Buenos Aires,Centro,1000000,10000
+2,Catamarca,Noroeste,1010000,10100
+3,Chaco,Noreste,1020000,10200
+4,Chubut,Patagonia,1030000,10300
+5,Cordoba,Centro,1040000,10400
+6,Corrientes,Noreste,1050000,10500
+7,Entre Rios,Centro,1060000,10600
+8,Formosa,Noreste,1070000,10700
+9,Jujuy,Noroeste,1080000,10800
+10,La Pampa,Centro,1090000,10900
+11,La Rioja,Noroeste,1100000,11000
+12,Mendoza,Cuyo,1110000,11100
+13,Misiones,Noreste,1120000,11200
+14,Neuquen,Patagonia,1130000,11300
+15,Rio Negro,Patagonia,1140000,11400
+16,Salta,Noroeste,1150000,11500
+17,San Juan,Cuyo,1160000,11600
+18,San Luis,Cuyo,1170000,11700
+19,Santa Cruz,Patagonia,1180000,11800
+20,Santa Fe,Centro,1190000,11900
+21,Santiago Del Estero,Noroeste,1200000,12000
+22,Tierra Del Fuego,Patagonia,1210000,12100
+23,Tucuman,Noroeste,1220000,12200
+24,Caba,Centro,1230000,12300
