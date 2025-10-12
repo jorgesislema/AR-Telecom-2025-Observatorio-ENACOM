@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+.venv_*/
+venv_*/
+ENV/
+env/
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Data files (mantener estructura pero no datos sensibles)
+data/raw/*.xlsx
+data/raw/*.csv
+data/processed/dimensional/*.csv
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/processed/dimensional/.gitkeep
+
+# Logs
+logs/*.log
+logs/*.txt
+!logs/.gitkeep
+
+# MySQL dumps
+*.sql
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Environment files with secrets
+.env
+!.env.example
+
+# BI files (grandes, específicos del usuario)
+*.pbix
+*.twb
+*.twbx
+*.hyper
+
+# Reports generated
+reports/*.pdf
+reports/*.html
+!reports/.gitkeep
