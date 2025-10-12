@@ -1,0 +1,8 @@
+tecnologia_id,tecnologia,categoria,descripcion
+TEC1,FTTH,Internet Fijo,FTTH
+TEC2,HFC,Internet Fijo,HFC
+TEC3,ADSL,Internet Fijo,ADSL
+TEC4,4G,Móvil,4G
+TEC5,Telefonia Fija,Telefonía Fija,Telefonia Fija
+TEC6,TV Cable,TV Paga,TV Cable
+TEC7,TV Abierta,TV Abierta,TV Abierta
