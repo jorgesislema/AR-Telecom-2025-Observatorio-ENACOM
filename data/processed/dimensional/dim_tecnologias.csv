@@ -1,15 +1,8 @@
-tecnologia_id,tecnologia,categoria,descripcion
-TEC1,ADSL,INTERNET_FIJO,Asymmetric Digital Subscriber Line
-TEC2,CABLE_MODEM,INTERNET_FIJO,Internet por cable coaxial
-TEC3,FIBRA_OPTICA,INTERNET_FIJO,Fiber To The Home/Building
-TEC4,WIRELESS,INTERNET_FIJO,Internet inalámbrico fijo
-TEC5,OTROS,INTERNET_FIJO,Otras tecnologías de internet fijo
-TEC6,SATELITAL,INTERNET_FIJO,Internet satelital
-TEC7,DIAL_UP,INTERNET_FIJO,Conexión telefónica
-TEC8,LTE,INTERNET_MOVIL,Long Term Evolution 4G
-TEC9,3G,INTERNET_MOVIL,Tercera generación móvil
-TEC10,5G,INTERNET_MOVIL,Quinta generación móvil
-TEC11,TELEFONIA_FIJA,TELEFONIA,Líneas de telefonía fija
-TEC12,TV_CABLE,TV_PAGA,Televisión por cable
-TEC13,TV_SATELITAL,TV_PAGA,Televisión satelital
-TEC14,IPTV,TV_PAGA,Internet Protocol Television
+tecnologia_id,tecnologia,categoria
+TEC1,FTTH,INTERNET_FIJO
+TEC2,HFC,INTERNET_FIJO
+TEC3,ADSL,INTERNET_FIJO
+TEC4,4G,MOVIL
+TEC5,Telefonia Fija,TELEFONIA_FIJA
+TEC6,TV Cable,TV_PAGA
+TEC7,TV Abierta,TV_ABIERTA
