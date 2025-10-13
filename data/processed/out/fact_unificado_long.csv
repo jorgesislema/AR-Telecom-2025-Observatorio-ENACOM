@@ -1,0 +1,4 @@
+anio,dominio,subcategoria,variable,valor,fuente_archivo
+2021,Internet,Accesos,accesos,100,fuente1
+2021,Movil,Lineas,operativos,200,fuente2
+2022,TelefoniaFija,Accesos,hogares,50,fuente3
