@@ -1,0 +1,4 @@
+rango_key,orden
+0-3_mbps,1
+3-10_mbps,2
+10+_mbps,3
