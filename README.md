@@ -1,52 +1,102 @@
 # AR-Telecom-2025-Observatorio-ENACOM
 
-Observatorio 2025 de telecomunicaciones en Argentina con datos ENACOM: pipeline ETL optimizado que genera directamente un modelo BI curado para Tableau con relaciones claras.
+Observatorio 2025 de telecomunicaciones en Argentina con datos ENACOM. Pipeline ETL que genera modelo dimensional con fechas normalizadas y base de datos MySQL para análisis BI.
 
 ## Objetivo
 
-Generar un modelo de datos BI listo para Tableau con dimensiones y hechos relacionados por IDs consistentes, eliminando la complejidad de archivos intermedios.
+Procesar datos ENACOM (35 archivos XLSX) y generar:
+- Modelo dimensional estrella con fechas normalizadas (año, trimestre, mes)
+- Base de datos MySQL poblada 
+- Tablas optimizadas para dashboards (Power BI, Tableau, etc.)
 
 ## Estructura del Proyecto
 
 ```
 AR-Telecom-2025-Observatorio-ENACOM/
 ├── data/
-│   ├── raw/enacom/          # Datos originales CSV (33 archivos)
-│   └── processed/bi/        # Modelo BI curado (8 archivos)
+│   ├── raw/                     # Datos originales XLSX (35 archivos)
+│   └── processed/dimensional/   # Modelo dimensional CSV (32 archivos)
 ├── pipelines/
-│   └── etl_bi_curado.py     # ETL principal que genera modelo BI
+│   ├── etl_dimensional_completo.py  # ETL principal
+│   └── load_to_mysql.py             # Cargador a MySQL
 ├── tests/
-│   └── test_bi_curado.py    # Validacion del modelo BI
-├── requirements.txt
-└── README.md
+│   ├── test_modelo_dimensional.py   # Validaciones del modelo
+│   ├── test_etl.py                  # Tests del ETL
+│   └── test_bi_curado.py           # Tests legacy
+├── notebooks/
+│   └── eda_etl_completo.ipynb      # Análisis exploratorio
+├── logs/                           # Logs de ejecución
+├── .venv/                          # Entorno virtual Python
+├── dashboard_enacom.pbix           # Dashboard Power BI
+├── GUIA_MODELO_DIMENSIONAL.md      # Documentación del modelo
+├── README_MYSQL.md                 # Guía de carga a MySQL
+├── .env.example                    # Plantilla de configuración
+├── .gitignore                      # Exclusiones de Git
+├── requirements.txt                # Dependencias Python
+└── README.md                       # Este archivo
 ```
 
-## Inicio Rapido
+## Inicio Rápido
 
 ### Prerequisitos
-- Python 3.8+
-- pip
+- Python 3.9+
+- MySQL 5.7+ (opcional, para base de datos)
 
-### Instalacion
+### Instalación
 ```bash
 git clone https://github.com/jorgesislema/AR-Telecom-2025-Observatorio-ENACOM.git
 cd AR-Telecom-2025-Observatorio-ENACOM
+
+# Crear entorno virtual
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1  # Windows PowerShell
+# source .venv/bin/activate   # Linux/Mac
+
+# Instalar dependencias
 pip install -r requirements.txt
 ```
 
-### Generar Modelo BI
+### Generar Modelo Dimensional
 ```bash
-python pipelines/etl_bi_curado.py
+python pipelines/etl_dimensional_completo.py
+```
+
+### Cargar a MySQL (Opcional)
+```bash
+# Configurar conexión
+cp .env.example .env
+# Editar .env con credenciales MySQL
+
+# Cargar datos
+python pipelines/load_to_mysql.py
 ```
 
 ### Validar Modelo
 ```bash
-python tests/test_bi_curado.py
+python tests/test_modelo_dimensional.py
 ```
 
-## Modelo BI para Tableau
+## Modelo Dimensional
 
-El ETL genera 8 archivos en `data/processed/bi/`:
+El ETL genera en `data/processed/dimensional/`:
+
+### Dimensiones (4)
+- `dim_provincias.csv` - 24 provincias con región, población, superficie
+- `dim_tecnologias.csv` - 14 tecnologías (ADSL, fibra, cable, etc.)
+- `dim_velocidades.csv` - 7 rangos de velocidad en Mbps/kbps
+- `dim_servicios.csv` - 6 servicios (internet, móvil, TV, etc.)
+
+### Hechos (28)
+- **Internet**: accesos por tecnología, velocidad, penetración, ingresos
+- **Móvil**: accesos, llamadas, minutos, SMS, penetración, ingresos  
+- **Telefonía fija**: accesos, penetración, ingresos
+- **TV paga**: accesos, penetración, ingresos
+
+### Características Clave
+- **Sin tiempo_id**: fechas normalizadas (`anio`, `trimestre`, `mes`)
+- **IDs alfanuméricos**: PR01-PR24, TEC1-TEC14, VEL1-VEL7, SRV1-SRV6
+- **Granularidades**: nacional, provincial, localidades según disponibilidad
+- **Relaciones limpias**: solo IDs que corresponden a datos reales
 
 ### Dimensiones (4 archivos)
 
